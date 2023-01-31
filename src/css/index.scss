@@ -1,0 +1,68 @@
+
+@import './utils/variables';
+@import './utils/mixins.scss';
+@import './base/typography.scss';
+@import './base/layout.scss';
+
+
+body {
+	font-family: $font-family;
+	background-color: $background-color;
+	color: $white-color;
+	margin: 0 auto;
+}
+nav {
+	text-align: center;
+	margin-top: 6em;
+	background-color: $nav-color;
+	height: 3.75em;
+	padding: 0px 40px; 
+}
+.main-nav {
+	li {
+		display: $display;
+		padding: 5px 30px; 
+		font-weight: $font-weight;
+		font-size: $font-size-nav;
+		margin: 10px;
+	}
+}
+a {
+	color: $nav-text-color;
+	text-decoration: $text-decoration;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.half-column {
+	display: $display; 
+	width: 40%;
+	padding: 50px 0px 10px 20px; 
+}
+.landing-copy {
+	margin-left: 70px;
+	p {
+		@include fontLine(1.3em, 1.4em);
+	}
+	h1 {
+		@include fontLine(3em, 1.2em);
+		
+	}
+}
+.cta-button {
+	border: 2px solid $white-color;
+	border-radius: 50px;
+	background-color: $button-color;
+	color: $white-color;
+	font-weight: $font-weight*1.75;
+	padding: 5px 20px;
+}
+a.cta-button {
+	&:hover {
+		background-color: $button-hover-color;
+		text-decoration: $text-decoration;
+	}
+}
+.right {
+	float: right;
+}
